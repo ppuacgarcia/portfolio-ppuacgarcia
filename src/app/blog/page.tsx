@@ -44,11 +44,13 @@ export default async function Blog() {
           </h1>
           <NavigationBar />
         </header>
-        <div>
+        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 p-6">
           {Array.isArray(posts) && posts.map((post, index) => (
-            <article key={index}>
-              <h2>{post.attributes.tittle}</h2> {/* Asegúrate de que "tittle" es correcto */}
-              <p>{post.attributes.Body}</p> {/* Asegúrate de que "Body" es correcto */}
+            <article key={index} className="bg-secondary-blue rounded-lg shadow-md">
+              <div className="p-4">
+                <h1 className="text-xl font-bold mb-2 text-third-blue">{post.attributes.tittle}</h1>
+                <p className="text-white">{post.attributes.Body}</p>
+              </div>
             </article>
           ))}
         </div>
