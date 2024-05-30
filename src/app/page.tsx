@@ -1,5 +1,5 @@
-import NavigationBar from "./componets/nav-bar";
-import PresentationCard from "./componets/presentation-card";
+import NavigationBar from "./components/nav-bar";
+import PresentationCard from "./components/presentation-card";
 export default function Home() {
   return (
     <main>

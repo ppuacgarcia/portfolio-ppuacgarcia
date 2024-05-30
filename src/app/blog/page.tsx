@@ -1,4 +1,4 @@
-import NavigationBar from "../componets/nav-bar";
+import NavigationBar from "../components/nav-bar";
 import axios from "axios";
 import { parsedEnv } from "../env";
 interface PostAttributes {
