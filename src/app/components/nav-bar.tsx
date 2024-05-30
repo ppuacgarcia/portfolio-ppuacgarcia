@@ -1,31 +1,73 @@
-"use client"
+"use client";
+import Link from "next/link";
+import React, { useState } from "react";
+import NavLink from "./NavLink";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
+import MenuOverlay from "./MenuOverlay";
 
-export default function NavigationBar() {
-    return (
-    <nav className="bg-primary-blue p-3">
-        <ul className="flex flex-col md:flex-row">
-            <li className="flex-1 mb-2 md:mb-0 md:mr-2">
-                <a className="text-center block  rounded py-2 px-4 bg-secondary-blue hover:bg-third-blue text-white" href="/">
-                    Inicio
-                </a>
-            </li>
-            <li className="flex-1 mb-2 md:mb-0 md:mr-2">
-            <a className="text-center block  rounded py-2 px-4 bg-secondary-blue hover:bg-third-blue text-white" href="/recent-projects">
-                    Proyectos recientes
-                </a>
-            </li>
-            <li className="flex-1 mb-2 md:mb-0 md:mr-2">
-                <a className="text-center block  rounded py-2 px-4 bg-secondary-blue hover:bg-third-blue text-white" href="/education">
-                    Educación
-                </a>
-            </li>
-            <li className="flex-1">
-                <a className="text-center block  rounded py-2 px-4 bg-secondary-blue hover:bg-third-blue text-white" href="/blog">
-                    Blog
-                </a>
-            </li>
-        </ul>
+interface NavLinkType {
+  title: string;
+  path: string;
+}
+
+const navLinks: NavLinkType[] = [
+  {
+    title: "Inicio",
+    path: "/",
+  },
+  {
+    title: "Proyectos Recientes",
+    path: "/recent-projects",
+  },
+  {
+    title: "Educación",
+    path: "/education",
+  },
+  {
+    title: "Blog",
+    path: "/blog",
+  },
+];
+
+export default function Navbar() {
+  const [navbarOpen, setNavbarOpen] = useState(false);
+
+  return (
+    <nav className="fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100">
+      <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
+        <Link href="/">
+        <div className="text-xl md:text-3xl font-semibold" style={{background: `linear-gradient(to right, #590638, #E34A0F)`, WebkitBackgroundClip: 'text', color: 'transparent'}}>
+          PABLO PUAC
+        </div>
+        </Link>
+        <div className="mobile-menu block md:hidden">
+          {!navbarOpen ? (
+            <button
+              onClick={() => setNavbarOpen(true)}
+              className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
+            >
+              <Bars3Icon className="h-5 w-5" />
+            </button>
+          ) : (
+            <button
+              onClick={() => setNavbarOpen(false)}
+              className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
+            >
+              <XMarkIcon className="h-5 w-5" />
+            </button>
+          )}
+        </div>
+        <div className="menu hidden md:block md:w-auto" id="navbar">
+          <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
+            {navLinks.map((link, index) => (
+              <li key={index}>
+                <NavLink href={link.path} title={link.title} />
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      {navbarOpen && <MenuOverlay links={navLinks} />}
     </nav>
-    
-    );
-  }
+  );
+}

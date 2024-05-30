@@ -1,7 +1,6 @@
 import React from "react";
 import NavLink from "./NavLink";
 
-// Definimos una interfaz para las props
 interface MenuOverlayProps {
   links: {
     path: string;
@@ -9,7 +8,6 @@ interface MenuOverlayProps {
   }[];
 }
 
-// Definimos el componente como una función por defecto
 export default function MenuOverlay({ links }: MenuOverlayProps) {
   return (
     <ul className="flex flex-col py-4 items-center">
@@ -21,3 +19,5 @@ export default function MenuOverlay({ links }: MenuOverlayProps) {
     </ul>
   );
 }
+
+
