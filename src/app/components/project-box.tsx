@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-
+import Image from 'next/image';
 interface ProjectBoxProps {
   image: string;
   title: string;
@@ -34,7 +34,7 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({ image, title, description, tech
   return (
     <div className="bg-primary-blue m-4 shadow-md rounded-lg overflow-hidden lg:flex">
       <div className="lg:w-1/2">
-        <img src={image} alt={title} className="w-full h-auto lg:h-full object-cover" onError={handleImageError} />
+        <Image src={image} alt={title} className="w-full h-auto lg:h-full object-cover" onError={handleImageError} width={500} height={500} />
       </div>
       <div className="lg:w-1/2 p-6">
         <h2 className="text-2xl font-bold mb-4">{title}</h2>
