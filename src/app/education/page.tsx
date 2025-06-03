@@ -17,13 +17,9 @@ export default function Education() {
 
       <section className="p-6 grid gap-6 md:grid-cols-1 lg:grid-cols-3">
         <div className="bg-secondary-blue bg-opacity-80 text-white p-4 rounded-lg shadow-lg">
-          <h2 className="text-3xl font-bold mb-2">Carrera</h2>
+          <h2 className="text-3xl font-bold mb-2">Licenciatura en</h2>
           <div className="text-xl font-semibold mb-2">Ingeniería Informática y Sistemas</div>
           <div className="text-lg mb-2">Universidad Rafael Landívar</div>
-          <div className="text-lg mb-2">Noveno semestre</div>
-          <div className="w-full bg-gray-200 rounded-full dark:bg-gray-700">
-            <div className="bg-third-blue text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style={{ width: `${progressPercentage}%` }}> {progressPercentage}% Completado</div>
-          </div>
         </div>
 
         <div className="bg-third-blue  text-white p-4 rounded-lg shadow-lg">
