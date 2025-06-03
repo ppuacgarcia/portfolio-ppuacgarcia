@@ -23,10 +23,6 @@ const navLinks: NavLinkType[] = [
     title: "Educación",
     path: "/education",
   },
-  {
-    title: "Blog",
-    path: "/blog",
-  },
 ];
 
 export default function Navbar() {

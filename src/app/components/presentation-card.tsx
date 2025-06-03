@@ -42,11 +42,12 @@ export default function PresentationCard() {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl px-4">
-            un entusiasta estudiante de quinto año de Ingeniería Informática y Sistemas.
-            A lo largo de mi carrera, he cultivado un profundo interés por la tecnología y su influencia en el mundo moderno.
-            Mi objetivo es aplicar mis habilidades y conocimientos para desarrollar soluciones innovadoras que mejoren la vida
-            de las personas y optimicen procesos en diversas industrias. Además, quiero contribuir al progreso de mi país compartiendo
-            mis conocimientos y enriqueciendo a la comunidad.
+          👋 ¡Hola! Soy Ingeniero en Informática y Sistemas, apasionado por la tecnología, la innovación y el impacto que pueden generar en la sociedad.\n
+              Mi propósito es crear soluciones que no solo resuelvan problemas reales, sino que también mejoren la calidad de vida de las personas y optimicen procesos en diversas industrias.
+              Con una visión centrada en el desarrollo tecnológico de mi país, busco combinar creatividad, lógica y compromiso para impulsar proyectos con propósito.
+              Creo en el poder del conocimiento compartido y en la tecnología como herramienta de transformación.
+              Bienvenido a mi portafolio, donde comparto mi trabajo, mis ideas y mi pasión por construir un futuro más conectado e inteligente. 🚀
+
           </p>
           <div className="p-5">
             <Link
