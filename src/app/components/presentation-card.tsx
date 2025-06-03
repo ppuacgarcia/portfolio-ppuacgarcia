@@ -42,7 +42,7 @@ export default function PresentationCard() {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl px-4">
-          👋 ¡Hola! Soy Ingeniero en Informática y Sistemas, apasionado por la tecnología, la innovación y el impacto que pueden generar en la sociedad.\n
+          👋 ¡Hola! Soy Ingeniero en Informática y Sistemas, apasionado por la tecnología, la innovación y el impacto que pueden generar en la sociedad.
               Mi propósito es crear soluciones que no solo resuelvan problemas reales, sino que también mejoren la calidad de vida de las personas y optimicen procesos en diversas industrias.
               Con una visión centrada en el desarrollo tecnológico de mi país, busco combinar creatividad, lógica y compromiso para impulsar proyectos con propósito.
               Creo en el poder del conocimiento compartido y en la tecnología como herramienta de transformación.
